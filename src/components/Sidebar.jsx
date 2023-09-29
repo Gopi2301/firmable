@@ -1,10 +1,45 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Sidebar = ({ list, addToSelect }) => {
-    const handleClick = (ele) => {
-        addToSelect(ele)
-    }
+const Sidebar = ({ onValueClick }) => {
+
+    const list = [
+        {
+            name: 'person name',
+            icon: '/person.svg',
+            value: 'person'
+        },
+        {
+            name: 'company name',
+            icon: '/company.svg',
+            value: 'company',
+        },
+        {
+            name: 'location',
+            icon: '/location.svg',
+            value: 'location',
+        },
+        {
+            name: 'seniority',
+            icon: '/seniority.svg',
+            value: 'seniority',
+        },
+        {
+            name: 'position',
+            icon: 'position.svg',
+            value: 'position',
+        },
+        {
+            name: 'department',
+            icon: '/department.svg',
+            value: 'department',
+        },
+        {
+            name: 'people with',
+            icon: '/people.svg',
+            value: 'people',
+        },
+    ]
     return (
         <div className='sidebar container'>
             <div className='sidebar__header flex-bt sidebar__header-text'>
@@ -21,7 +56,7 @@ const Sidebar = ({ list, addToSelect }) => {
                             <img src={ele.icon} alt={ele.value} />
                             <p className='item-text'>{ele.name}</p>
                         </div>
-                        <img onClick={() => handleClick(ele)} src="/plus.svg" className='item-pic' alt="plus" />
+                        <img onClick={() => onValueClick(ele)} src="/plus.svg" className='item-pic' alt="plus" />
 
                     </li>
 

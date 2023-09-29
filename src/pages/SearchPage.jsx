@@ -1,65 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 
 const SearchPage = () => {
-    const list = [
-        {
-            name: 'person name',
-            icon: '/person.svg',
-            value: 'person'
-        },
-        {
-            name: 'company name',
-            icon: '/company.svg',
-            value: 'company',
-        },
-        {
-            name: 'location',
-            icon: '/location.svg',
-            value: 'location',
-        },
-        {
-            name: 'seniority',
-            icon: '/seniority.svg',
-            value: 'seniority',
-        },
-        {
-            name: 'position',
-            icon: 'position.svg',
-            value: 'position',
-        },
-        {
-            name: 'department',
-            icon: '/department.svg',
-            value: 'department',
-        },
-        {
-            name: 'people with',
-            icon: '/people.svg',
-            value: 'people',
-        },
-    ]
-    const [select, setSelect] = useState([]);
-    const [valueToAdd, setValueToAdd] = useState('');
 
-    // const sample = [
-    //     {
-    //         name: 'company name',
-    //         icon: '/company.svg',
-    //         value: 'company',
-    //     },
-    //     {
-    //         name: 'people with',
-    //         icon: '/people.svg',
-    //         value: 'people',
-    //     }
-    // ]
+    const [select, setSelect] = useState([]);
+
+    const handleValueClick = (value) => {
+        if (!select.includes(value)) {
+            const uniqueSet = new Set(select);
+            uniqueSet.add(value);
+            setSelect(Array.from(uniqueSet));
+        }
+        if (select.length === 2) {
+            const newSelect = select.slice(1);
+            setSelect([...newSelect, value]);
+        } else {
+            setSelect([...select, value]);
+        }
+    };
+    console.log(select)
     return (
         <>
             <Navbar className='navbar' />
             <div className='display-container container'>
-                <Sidebar list={list} className='sidebar' />
+                <Sidebar onValueClick={handleValueClick} />
                 <div className='main-content'>
                     <div className='headbar flex-bt headbar-txt padding-sm-lg'>
                         <div className='filters flex'>
