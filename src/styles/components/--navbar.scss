@@ -1,0 +1,64 @@
+@use '../variables/--variables.scss' as var;
+.navbar {
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+    height: 60px;
+   &__logo-wrapper{
+    width: 24px;
+    height: 24px;
+    display: block;
+    padding: 18px;
+   }
+
+    &__menu{
+        &-item{
+            padding-left: 1.5rem;
+            cursor: pointer;
+        }
+    }
+   &__menu{
+    display: flex;
+   }
+   &__input{
+    height: 1.5rem;
+    border:1px solid var.$stk-light;
+    border-radius: .5rem;
+    outline: transparent;
+   }
+.active{
+    // border-bottom: 4px solid var.$clr-interActive;
+    color:var.$clr-interActive;
+    position: relative;
+
+}
+.active::after{
+    content:'';
+    position: absolute;
+    bottom: 2px;
+    width:100%;
+    border: 3px solid var.$clr-interActive;
+    border-radius: 2px;
+}
+
+box-shadow: 0px 4px 5px 0px rgba(9,30,66,0.31);
+-webkit-box-shadow: 0px 4px 5px 0px rgba(9,30,66,0.31);
+-moz-box-shadow: 0px 4px 5px 0px rgba(9,30,66,0.31);
+}
+
+  .navbar__input-wrapper {
+   
+    position: relative;
+  
+    &::before {
+      content: '';
+      background-image: url('/public/zoom.svg'); 
+      background-size: cover;
+      position: absolute;
+      display: block;
+      height: 20px;
+      width: 20px;
+      left: 8px; 
+      top: 50%; 
+      transform: translateY(-50%); 
+    }
+  }

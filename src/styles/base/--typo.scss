@@ -1,0 +1,46 @@
+@use '../variables/--variables.scss' as var;
+// font-family: 'Figtree', sans-serif;
+.navbar__menu-text{
+    font-family: 'Figtree', sans-serif;
+    font-weight: 600;
+    font-size:14px;
+}
+.profile{
+    font-family: 'Figtree', sans-serif;
+    font-weight: 700;
+    font-size:14px;
+    background-color: var.$stk-light;
+    line-height: 24px;
+    padding: 6px;
+    border-radius: 4px;
+}
+.sidebar__header-text{
+    font-family: 'Figtree', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color:var.$clr-darker;
+    line-height: 24px;
+}
+.btn-text{
+    font-family: 'Figtree', sans-serif;
+    // color:#F8FAFC;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+.sidebar__section-title{
+    font-family: 'Figtree', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 16px;
+    color:var.$con-light;
+    text-transform: uppercase;
+}
+.item-text{
+    font-family: 'Figtree', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color:var.$clr-dark;
+}

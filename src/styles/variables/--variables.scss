@@ -1,0 +1,36 @@
+$clr-interActive: #126cd6;
+$clr-brand-50: #f3f7fc;
+$clr-dark: #475569;
+$con-light:#94A3B8;
+$clr-darker: #0f172a;
+$stk-light:#E2E8F0;
+$txt-light:#F8FAFC;
+.flex-nav{
+    display: flex;
+    gap:1rem;
+    
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+
+}
+.flex-lt{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:1rem;
+
+}
+.flex-bt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem;
+
+}
+.container{
+    padding-inline: 1rem;
+}
