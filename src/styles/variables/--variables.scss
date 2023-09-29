@@ -5,6 +5,8 @@ $con-light:#94A3B8;
 $clr-darker: #0f172a;
 $stk-light:#E2E8F0;
 $txt-light:#F8FAFC;
+$clr-neutral:#F1F5F9;
+$stroke-light:#E2E8F0;
 .flex-nav{
     display: flex;
     gap:1rem;
@@ -24,6 +26,12 @@ $txt-light:#F8FAFC;
     gap:1rem;
 
 }
+.flex-sm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:.5rem;
+}
 .flex-bt{
     display: flex;
     justify-content: space-between;
@@ -33,4 +41,14 @@ $txt-light:#F8FAFC;
 }
 .container{
     padding-inline: 1rem;
+}
+.padding-sm-lg{
+    padding: 1rem .5rem;
+}
+.padding-sm{
+    padding:.5rem;
+}
+.border-clr{
+    border:1px solid $stroke-light;
+  border-radius:.5rem;
 }

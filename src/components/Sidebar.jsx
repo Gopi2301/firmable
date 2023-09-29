@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Sidebar = ({ list }) => {
-    const navigate = useNavigate();
+const Sidebar = ({ list, addToSelect }) => {
     const handleClick = (ele) => {
-        console.log(ele);
+        addToSelect(ele)
     }
     return (
         <div className='sidebar container'>
@@ -22,7 +21,7 @@ const Sidebar = ({ list }) => {
                             <img src={ele.icon} alt={ele.value} />
                             <p className='item-text'>{ele.name}</p>
                         </div>
-                        <img onClick={() => handleClick(ele.value)} src="/plus.svg" className='item-pic' alt="plus" />
+                        <img onClick={() => handleClick(ele)} src="/plus.svg" className='item-pic' alt="plus" />
 
                     </li>
 

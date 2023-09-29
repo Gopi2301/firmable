@@ -1,5 +1,23 @@
+@use '../variables/--variables.scss' as var;
 .display-container{
     display: grid;
   grid-template-columns: 360px 1fr; 
   grid-gap: 20px; 
 }
+.main-content{
+  
+  flex-direction: row;
+}
+.headbar{
+  height: 2.25rem;
+}
+.filters {
+  display: flex;
+  background-color:var.$clr-neutral;
+  padding: 6px;
+  border-radius: 8px;
+  &__value{
+    text-transform: capitalize;
+  }
+}
+
