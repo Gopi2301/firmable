@@ -6,6 +6,7 @@ import './index.css'
 import SearchPage from './pages/SearchPage.jsx';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Table from './components/table.jsx';
+import FilterPage from './pages/FilterPage.jsx';
 
 
 const router = createBrowserRouter([
@@ -14,8 +15,8 @@ const router = createBrowserRouter([
     element: <SearchPage />,
   },
   {
-    path: "/table",
-    element: <Table />,
+    path: "/filter",
+    element: <FilterPage />,
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

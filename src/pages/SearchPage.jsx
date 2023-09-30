@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
-import { Checkbox, TableCell, TableHead, TableRow } from '@mui/material';
 import Tables from '../components/table';
 
 const SearchPage = () => {
 
-    const [select, setSelect] = useState([]);
+    const [select, setSelect] = useState([{
+        name: 'company',
+        icon: '/company.svg',
+        value: 'company'
+    }]);
 
     const handleValueClick = (value) => {
         if (!select.includes(value)) {
-            const uniqueSet = new Set(select);
-            uniqueSet.add(value);
-            setSelect(Array.from(uniqueSet));
-        }
-        if (select.length === 2) {
-            const newSelect = select.slice(1);
-            setSelect([...newSelect, value]);
-        } else {
-            setSelect([...select, value]);
+            if (select.length === 2) {
+                const newSelect = select.slice(1);
+                setSelect([...newSelect, value]);
+            } else {
+                setSelect([...select, value]);
+            }
         }
     };
     console.log(select)
