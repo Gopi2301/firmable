@@ -7,6 +7,7 @@ $stk-light:#E2E8F0;
 $txt-light:#F8FAFC;
 $clr-neutral:#F1F5F9;
 $stroke-light:#E2E8F0;
+$sur-light:#F8FAFC;
 .flex-nav{
     display: flex;
     gap:1rem;
@@ -51,4 +52,7 @@ $stroke-light:#E2E8F0;
 .border-clr{
     border:1px solid $stroke-light;
   border-radius:.5rem;
+}
+.pointer{
+    cursor:pointer;
 }

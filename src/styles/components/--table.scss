@@ -1,0 +1,30 @@
+@use '../variables/--variables.scss' as var;
+
+.table{
+   width:100%;
+   padding: 0 12px;
+   border: 1px solid var.$sur-light;
+   
+}
+table thead th {
+    // background-color: red;
+}
+table thead th:nth-child(1) {
+    // width:10%;
+   }
+table thead th:nth-child(2) {
+//    width:40%;
+  }
+  table thead th:nth-child(3) {
+    // width:40%;
+   }
+   table thead th:nth-child(4) {
+    // width:50%;
+   }
+   .table-head{
+    background-color: var.$sur-light;
+   }
+.table-body{
+    background-color: #fff;
+    
+}
