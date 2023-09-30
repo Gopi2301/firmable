@@ -39,3 +39,11 @@
     display: inline;
     padding-left: 4px;
 }
+.sidebar__additional-info p{
+    font-size:14px;
+    color:var.$clr-interActive;
+    padding: 4px;
+    font-weight: 600;
+    background-color: var.$sur-light;
+    border-radius: 8px;
+}

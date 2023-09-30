@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Sidebar = ({ onValueClick }) => {
+const Sidebar = ({ onValueClick, filter }) => {
 
     const list = [
         {
@@ -50,17 +50,37 @@ const Sidebar = ({ onValueClick }) => {
             </div>
             <p className='sidebar__section-title'>Recently Used</p>
             <ul className='sidebar__list'>
-                {list.map((ele) => (
-                    <li key={ele.value} className='sidebar__list-item'>
-                        <div className='sidebar__list-item-wrapper'>
-                            <img src={ele.icon} alt={ele.value} />
-                            <p className='item-text'>{ele.name}</p>
-                        </div>
-                        <img onClick={() => onValueClick(ele)} src="/plus.svg" className='item-pic pointer' alt="plus" />
-
-                    </li>
-
-                ))}
+                {
+                    !filter ? (
+                        list.map((ele) => (
+                            <li key={ele.value} className='sidebar__list-item'>
+                                <div className='sidebar__list-item-wrapper'>
+                                    <img src={ele.icon} alt={ele.value} />
+                                    <p className='item-text'>{ele.name}</p>
+                                </div>
+                                <img
+                                    onClick={() => onValueClick(ele)}
+                                    src="/plus.svg"
+                                    className='item-pic pointer'
+                                    alt="plus"
+                                />
+                            </li>
+                        ))
+                    ) : (
+                        <>
+                            <div className='sidebar__list-item '>
+                                <div className='sidebar__list-item-wrapper'>
+                                    <img src='/company.svg' alt='company' />
+                                    <p className='item-text'>Company</p>
+                                </div>
+                            </div>
+                            <div className='sidebar__additional-info flex-bt'>
+                                <p>information technology services</p>
+                                <p>IT consulting</p>
+                            </div>
+                        </>
+                    )
+                }
 
             </ul>
         </div>
