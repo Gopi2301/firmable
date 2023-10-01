@@ -3,8 +3,9 @@
 .table{
    width:100%;
    padding: 0 12px;
-   border: 1px solid var.$sur-light;
-   
+//    border: 1px solid var.$stroke-light;
+//    background-color:var.$sur-light;
+//    background-color: crimson;
 }
 table thead th {
     // background-color: red;
@@ -27,4 +28,8 @@ table thead th:nth-child(2) {
 .table-body{
     background-color: #fff;
     
+}
+.custom-header-class{
+    background-color: var.$sur-light;
+    color:var.$clr-dark;
 }
