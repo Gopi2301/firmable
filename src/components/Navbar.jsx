@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
                 <div className='navbar__section navbar__section--right flex-lt '>
                     <div className='navbar__input-wrapper'>
-                        <input type="text" name="" id="" className='navbar__input' label="Quick Look" />
+                        <input type="text" name="" id="" className='navbar__input' />
                     </div>
                     <p className='navbar__item navbar__item--highlight profile'>NP</p>
                 </div>

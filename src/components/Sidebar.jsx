@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const Sidebar = ({ onValueClick, filter }) => {
-
+    const page = window.location.pathname
+    // console.log(typeof (page.slice(1)));
     const list = [
         {
             name: 'person name',
@@ -70,8 +71,8 @@ const Sidebar = ({ onValueClick, filter }) => {
                         <>
                             <div className='sidebar__list-item '>
                                 <div className='sidebar__list-item-wrapper'>
-                                    <img src='/company.svg' alt='company' />
-                                    <p className='item-text'>Company</p>
+                                    <img src={`${page}.svg`} alt='company' />
+                                    <p className='item-text'>{page.slice(1)}</p>
                                 </div>
                             </div>
                             <div className='sidebar__additional-info flex-bt'>

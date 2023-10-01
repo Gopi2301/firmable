@@ -15,7 +15,31 @@ const router = createBrowserRouter([
     element: <SearchPage />,
   },
   {
-    path: "/filter",
+    path: "/company",
+    element: <FilterPage />,
+  },
+  {
+    path: "/person",
+    element: <FilterPage />,
+  },
+  {
+    path: "/location",
+    element: <FilterPage />,
+  },
+  {
+    path: "/seniority",
+    element: <FilterPage />,
+  },
+  {
+    path: "/position",
+    element: <FilterPage />,
+  },
+  {
+    path: "/department",
+    element: <FilterPage />,
+  },
+  {
+    path: "/people",
     element: <FilterPage />,
   }
 ]);

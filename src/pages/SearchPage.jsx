@@ -3,9 +3,10 @@ import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 
 import Tables from '../components/table';
+import { useNavigate } from 'react-router-dom';
 
 const SearchPage = () => {
-
+    const navigate = useNavigate()
     const [select, setSelect] = useState([{
         name: 'company',
         icon: '/company.svg',
@@ -21,6 +22,7 @@ const SearchPage = () => {
                 setSelect([...select, value]);
             }
         }
+        navigate(`/${value.value}`)
     };
     console.log(select)
 

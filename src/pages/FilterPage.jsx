@@ -7,9 +7,10 @@ import { useParams } from 'react-router-dom'
 const FilterPage = () => {
     const handleValueClick = () => { }
     const [filter, setFilter] = useState(false)
+    const page = window.location.pathname
     useEffect(() => {
         // Check if the current URL is '/filter'
-        if (window.location.pathname === '/filter') {
+        if (window.location.pathname === '/filter' || window.location.pathname === '/company' || window.location.pathname === '/person' || window.location.pathname === '/location' || window.location.pathname === '/seniority' || window.location.pathname === '/position' || window.location.pathname === '/department' || window.location.pathname === '/people') {
             setFilter(true); // Set filter to true if the URL is '/filter'
         } else {
             setFilter(false); // Set filter to false for other URLs
@@ -25,8 +26,8 @@ const FilterPage = () => {
                         <div className='filters flex'>
 
                             <div className='filters__item flex-sm '>
-                                <img src='/company.svg' alt='company' className='filters__icon' />
-                                <p className='filters__value pointer'>Company</p>
+                                <img src={`${page}.svg`} alt='company' className='filters__icon' />
+                                <p className='filters__value pointer'>{page.slice(1)}</p>
                             </div>
 
                         </div>
